@@ -1,1 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 96%;
+    background-image: url(/images/medical.png);
+    background-size: cover;
+    background-position:center;
+}
+.container{
+    padding: 20px 50;
+}
 
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 16.5px;
+    padding-left: -20px;
+    
+}
+.one{
+    color:black;
+    border: 1px solid white;
+    font-size: 16px;
+    padding: 24px;
+    background-color: white;
+    font-weight: bold;
+}
+.logo{
+    width: 140px;
+    padding: 15px 25px;
+    border-radius: 32.5%; 
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.icon{
+    transition: color 0.2s;
+    text-decoration: none;
+}
+.icon:hover{
+    color:gray;
+}
