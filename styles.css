@@ -4,54 +4,87 @@
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
-body{
+
+body {
     height: 100vh;
     width: 96%;
-    background-image: url(/images/medical.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url(images/medical.png);
     background-size: cover;
     background-position:center;
+    color: aliceblue;
 }
-.container{
+
+.container {
     padding: 20px 50;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: 16.5px;
     padding-left: -20px;
-    
-}
-.one{
-    color:black;
-    border: 1px solid white;
-    font-size: 16px;
-    padding: 24px;
-    background-color: white;
-    font-weight: bold;
-}
-.logo{
-    width: 140px;
-    padding: 15px 25px;
-    border-radius: 32.5%; 
+    width: 100%;
 }
 
-nav ul li{
+.one {
+    color:black;
+    border: 1px solid aliceblue;
+    font-size: 16px;
+    padding: 24px;
+    background-color: aliceblue;
+    font-weight: bold;
+}
+
+.logo {
+    width: 140px;
+    padding: 15px 25px;
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+    /* border-radius: 32.5%;  */
+}
+
+nav ul {
+    margin-top: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 20px 20px;
 }
-nav ul li a{
-    color: #fff;
+
+nav ul li a {
+    color: aliceblue;
     text-decoration: none;
 }
 
-.icon{
+.icon {
     transition: color 0.2s;
     text-decoration: none;
 }
-.icon:hover{
+
+.icon:hover {
     color:gray;
+}
+
+h1 {
+    margin-left: 5.5rem;
+    position: absolute;
+    bottom: 25%;
+}
+
+.about-us {
+    position: absolute;
+    bottom: 14%;
+    margin-left: 5.6rem;
+    color: black;
+    background-color: aliceblue;
+    padding: 1.2rem 2.5rem 1.2rem 2.5rem;
+}
+
+a {
+    text-decoration: none;
 }
