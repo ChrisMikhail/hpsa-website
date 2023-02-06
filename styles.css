@@ -13,6 +13,7 @@ body {
     background-position: center;
     color: aliceblue;
     display:grid;
+    background-repeat: no-repeat;
 
     
 
@@ -30,7 +31,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    font-size: 27px;
+    font-size: 1.3rem;
     padding-left: -20px;
    
     
@@ -39,7 +40,7 @@ nav {
 .one {
     color:black;
     border: 1px solid aliceblue;
-    font-size: 20px;
+    font-size: 1.1rem;
     padding: 24px;
     background-color: aliceblue;
     font-weight: bold;
@@ -91,7 +92,7 @@ h1 {
     margin-left: 5.5rem;
     position: absolute;
     bottom: 25%;
-    font-size: 40px;
+    font-size: 2.6rem;
 }
 
 .about-us {
@@ -100,14 +101,13 @@ h1 {
     margin-left: 5.6rem;
     color: black;
     padding: 1.2rem 2.5rem 1.2rem 2.5rem;
-    font-weight: bold;
     text-decoration: none;
     transition:color 0.2s;
     display:inline-block;
-    background:#ffffffbf;
+    background:aliceblue;
     border-radius: 4px;
     transition:ease .40s;
-    font-size:27px;
+    font-size:1.3rem;
 }
 
 .about-us:hover{
@@ -121,12 +121,12 @@ a {
 /*Next Section (Below Navbar)
     */
 #section1{
-    height: 300px;
-    background:#2A3B59;
+    height: 20rem;
+    background:rgb(38, 52, 80);
     display:inline-block;
     width:100%;
     text-align: center;
-    margin-top: 1000px; 
+    margin-top: 45rem; 
     position: relative;
     line-height: 50px;
 
@@ -134,12 +134,21 @@ a {
 
 #section1 h2{
     width:100%;
-    font-size: 3rem;
+    font-size: 2.6rem;
     position: relative;
-    top: 80px;
+    top: 3.6rem;
 }
 #section1 p{
     position: relative;
-    top:100px;
-    font-size: 1.5rem;
+    top:4.5rem;
+    font-size: 1.2rem;
 }
+
+/*
+Section 2 Under V 
+*/
+
+#section2 {
+    height: 20rem;
+}
+
