@@ -14,15 +14,12 @@ body {
     color: aliceblue;
     display:grid;
     background-repeat: no-repeat;
-
-    
-
 }
+
 html{
     scroll-behavior: smooth;
     height:100%;
 }
-
 
 nav {
     position:absolute;
@@ -33,8 +30,6 @@ nav {
     flex-wrap: wrap;
     font-size: 1.3rem;
     padding-left: -20px;
-   
-    
 }
 
 .one {
@@ -51,10 +46,11 @@ nav {
 }
 
 .logo {
+    position: absolute;
     width: 140px;
     padding: 15px 25px;
-    margin-left: 4rem;
-    margin-top: 1.5rem;
+    left: 4rem;
+    top: 1.5rem;
     /* border-radius: 32.5%;  */
 }
 
@@ -62,12 +58,15 @@ nav ul {
     margin-top: 1.5rem;
     margin-right: 0.5rem;
     padding: 10px 25px;
+    z-index: 1;
+    border-radius: 30px 0 0 0;
 }
 
 nav ul li {
     display: inline-block;
     list-style: none;
     margin: 20px 20px;
+    word-break: normal;
 }
 
 nav ul li a {
@@ -85,9 +84,12 @@ nav ul li a {
 .icon:hover {
     color: #04DACA;
 }
-.one:hover{
-    transform: scale(1.1);
+
+.one:hover {
+    /* transform: scale(1.1); */
+    filter: brightness(50%);
 }
+
 h1 {
     margin-left: 5.5rem;
     position: absolute;
@@ -111,34 +113,59 @@ h1 {
 }
 
 .about-us:hover{
-    transform: scale(1.1);
-
+    /* transform: scale(1.1); */
+    filter: brightness(50%);
 }
 
 a {
     text-decoration: none;
+    color: aliceblue;
 }
+
+.hamburgMenu {
+    /* display: none; */
+    font-size: 4rem;
+    z-index: 2;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+}
+
+/* @media only screen and (max-width: 880px) {
+    .hamburgMenu {
+        display: inline-block;
+    }
+
+    nav ul li {
+        display: none;
+    }
+} */
+
 /*Next Section (Below Navbar)
     */
-#section1{
+
+#section1 {
     height: 18rem;
     background:rgb(38, 52, 80);
     display:inline-block;
     width:100%;
     text-align: center;
-    margin-top: 46%;
-    position: relative;
+    position: absolute;
+    bottom: -18rem;
     line-height: 50px;
-
 }
 
-#section1 h2{
+#section1 h2 {
     width:100%;
     font-size: 2.6rem;
     position: relative;
     top: 3.6rem;
 }
-#section1 p{
+
+#section1 p {
     position: relative;
     top:4.5rem;
     font-size: 1.2rem;
@@ -150,8 +177,11 @@ Section 2 Under V
 
 #section2 {
     height: 600px;
-
+    position: absolute;
+    bottom: -50rem;
+    margin-left: 3rem;
 }
+
 #section2 h2{
     color:black;
     position: relative;
@@ -159,6 +189,7 @@ Section 2 Under V
     margin-left: 12%;
     font-size: 2.3rem;
 }
+
 #section2 p{
     color: black;
     position:relative;
@@ -184,12 +215,15 @@ Section 2 Under V
     
 
 }
+
 .hexagon{
     display: inline-block;
-    position: relative;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    bottom:485px;
-    left: 50%;
-
-    
+    bottom: -44rem;
+    left: 65%;
+    width: 400px;
+    height: 346px; /* ½√3 × width */
+    position: absolute;
+    overflow: hidden;
+    -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); 
 }
