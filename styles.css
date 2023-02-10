@@ -134,16 +134,6 @@ a {
     right: 3rem;
 }
 
-/* @media only screen and (max-width: 880px) {
-    .hamburgMenu {
-        display: inline-block;
-    }
-
-    nav ul li {
-        display: none;
-    }
-} */
-
 /*Next Section (Below Navbar)
     */
 
@@ -156,6 +146,7 @@ a {
     position: absolute;
     bottom: -18rem;
     line-height: 50px;
+    /* margin: 4.5rem; */
 }
 
 #section1 h2 {
@@ -170,6 +161,22 @@ a {
     top:4.5rem;
     font-size: 1.2rem;
 }
+
+@media screen and (max-width:730px)  {
+    #section1{
+        top:700px;
+        line-height: normal;
+        
+    }
+    #section1 h2{
+        font-size:1.5rem;
+        
+    }
+    #section1 p{
+        font-size:1.1rem;
+        width: auto;
+        
+    }
 
 /*
 Section 2 Under V 

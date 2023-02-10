@@ -26,7 +26,6 @@ function respondNav() {
     $("nav ul").css("background-color", "transparent");
     $(".container").css("filter", "brightness(100%)");
     $("body").css("overflow-y", "visible");
-    total = 0;
   }
 }
 
@@ -36,6 +35,9 @@ $(document).ready(function () {
 
 $(window).resize(function () {
   respondNav();
+  $(".container").css("filter", "brightness(100%)");
+  $("body").css("overflow-y", "visible");
+  total = 0;
 })
 
 $(".toggle-button").click(function () {
@@ -43,11 +45,10 @@ $(".toggle-button").click(function () {
   $("nav ul li").css("display", "list-item");
   $("nav ul").css("background-color", "rgb(38, 52, 80)");
   $("nav ul").css("height", "100vh");
-  // $("nav ul").css("max-width", "80vw");
   $("nav ul").animate({ width: 'toggle' }, 165, "linear");
   $(".container").css("filter", "brightness(40%)");
   $("body").css("overflow-y", "hidden");
-  if (total % 2 == 0) {
+  if (total % 2 == 0){
     $(".container").css("filter", "brightness(100%)");
     $("body").css("overflow-y", "visible");
   }
