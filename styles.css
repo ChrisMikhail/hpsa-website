@@ -27,9 +27,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     font-size: 1.3rem;
-    padding-left: -20px;
+    /* padding-left: -20px; */
 }
 
 .one {
