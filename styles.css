@@ -45,7 +45,7 @@ nav {
     transition:ease .40s;
 }
 
-.logo {
+#logo {
     position: absolute;
     width: 140px;
     padding: 15px 25px;
