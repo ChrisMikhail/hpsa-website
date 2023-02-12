@@ -47,12 +47,28 @@ nav {
 
 #logo {
     position: absolute;
-    width: 140px;
+    width: 20%;
+    max-width: 140px;
     padding: 15px 25px;
-    left: 4rem;
+    left: 1.5rem;
     top: 1.5rem;
-    /* border-radius: 32.5%;  */
+
 }
+@media screen and  (max-width: 767px) {
+    #logo {
+      width: 40%;
+      max-width: 140px;
+      left: 0.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    #logo {
+      width: 25%;
+      max-width: 140px;
+      left: 1rem;
+    }
+  }
 
 nav ul {
     margin-top: 1.5rem;
@@ -96,20 +112,19 @@ h1 {
     font-size: 2.6rem;
 }
 
-
 .about-us {
-    position: absolute;
-    bottom: 14%;
-    margin-left: 5.6rem;
-    color: black;
-    padding: 1.2rem 2.5rem 1.2rem 2.5rem;
-    text-decoration: none;
-    transition:color 0.2s;
-    display:inline-block;
-    background:aliceblue;
-    border-radius: 4px;
-    transition:ease .40s;
-    font-size:1.3rem;
+  position: absolute;
+  bottom: 14%;
+  margin-left: 5rem;
+  color: black;
+  padding: 1.2rem 2.5rem 1.2rem 2.5rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-block;
+  background: aliceblue;
+  border-radius: 4px;
+  transition: ease .40s;
+  font-size: 1.3rem;
 }
 
 .about-us:hover{
@@ -118,10 +133,21 @@ h1 {
 }
 
 
+
 a {
     text-decoration: none;
     color: aliceblue;
 }
+
+  
+  @media screen and(min-width: 768px) and (max-width: 1023px) {
+    h1 {
+    
+      margin-left: 20rem;
+      font-size: 2.2rem;
+    }
+  
+  }
 
 
 
@@ -167,15 +193,17 @@ a {
 
 
 @media screen and (max-width:730px)  {
+    
     h1{
         font-size: 2rem;
-        bottom:40%;
-        right:40%;  
+        bottom: 40%;
+        right: 10%;
+        left: -10%;
     }
     .about-us{
         position: absolute;
-        bottom:180px;
-        left:-70px;
+        bottom: 30%;
+        left:-9%;
 
     }
     #section1{
@@ -230,6 +258,22 @@ Section 2 Under V
     background-color: rgb(38, 52, 80);
 }
 
+
+
+
+.hexagon{
+    display: inline-block;
+    bottom: -44rem;
+    left: 60%;
+    width: 400px;
+    height: 346px;
+    position: absolute;
+    overflow: hidden;
+    -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
+}
+
 @media screen and (max-width:600px) {
     .team{
         position: relative;
@@ -251,18 +295,73 @@ Section 2 Under V
         font-size:1rem;
         top:90px;
     }
+    .hexagon{
+        display: none;
+    }
     
 }
 
 /*
-.hexagon{
-    display: inline-block;
-    bottom: -44rem;
-    left: 65%;
-    width: 400px;
-    height: 346px; /* ½√3 × width 
+Event Section 
+
+.event {
     position: absolute;
-    overflow: hidden;
-    -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); 
-}*/
+    bottom: 0;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 80vw;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    margin:-970px auto;
+    overflow:hidden;
+    border-radius: 10px;
+    justify-content: center;
+    
+
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.image-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#event-picture {
+    width: 80%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.event-content {
+    text-align: center;
+    color:black;
+
+}
+
+#event-picture {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+.event-content span{
+    position: absolute;
+    padding: 1rem 0.2rem 1.2rem 2.5rem;
+    width:20%;
+    left:40%;
+    background:aliceblue;
+    border-radius: 4px;
+    font-size:1.3rem;
+    background-color: rgb(38, 52, 80);
+    color:white;
+
+}
+*/
