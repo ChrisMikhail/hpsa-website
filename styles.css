@@ -27,9 +27,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
     font-size: 1.3rem;
-    /* padding-left: -20px; */
 }
 
 .one {
@@ -47,42 +45,23 @@ nav {
 
 #logo {
     position: absolute;
-    width: 20%;
-    max-width: 140px;
-    padding: 15px 25px;
+    width: calc(50px + 4vw);
     left: 1.5rem;
     top: 1.5rem;
-
+    z-index: 3;
 }
-@media screen and  (max-width: 767px) {
-    #logo {
-      width: 40%;
-      max-width: 140px;
-      left: 0.5rem;
-    }
-  }
-  
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    #logo {
-      width: 25%;
-      max-width: 140px;
-      left: 1rem;
-    }
-  }
 
 nav ul {
     margin-top: 1.5rem;
     margin-right: 0.5rem;
     padding: 10px 25px;
     z-index: 1;
-    border-radius: 30px 0 0 0;
 }
 
 nav ul li {
     display: inline-block;
     list-style: none;
     margin: 20px 20px;
-    word-break: normal;
 }
 
 nav ul li a {
@@ -102,20 +81,20 @@ nav ul li a {
 }
 
 .one:hover {
-    /* transform: scale(1.1); */
     filter: brightness(50%);
 }
 h1 {
-    margin-left: 5.5rem;
+    left: 1.5rem;
+    width: fit-content;
     position: absolute;
     bottom: 25%;
-    font-size: 2.6rem;
+    font-size: calc(1.8rem + 1.2vw);
 }
 
 .about-us {
   position: absolute;
   bottom: 14%;
-  margin-left: 5rem;
+  left: 1.6rem;
   color: black;
   padding: 1.2rem 2.5rem 1.2rem 2.5rem;
   text-decoration: none;
@@ -125,88 +104,81 @@ h1 {
   border-radius: 4px;
   transition: ease .40s;
   font-size: 1.3rem;
+  z-index: 3;
 }
 
 .about-us:hover{
-    /* transform: scale(1.1); */
     filter: brightness(50%);
 }
-
-
 
 a {
     text-decoration: none;
     color: aliceblue;
 }
 
-  
-  @media screen and(min-width: 768px) and (max-width: 1023px) {
-    h1 {
-    
-      margin-left: 20rem;
-      font-size: 2.2rem;
-    }
-  
-  }
-
-
-
 .hamburgMenu {
-    /* display: none; */
     font-size: 4rem;
     z-index: 2;
 }
 
 .toggle-button {
+    display: none;
     position: absolute;
-    top: 3rem;
-    right: 3rem;
+    top: 1.5rem;
+    right: 1.5rem;
 }
 
 /*Next Section (Below Navbar)
     */
 
 #section1 {
-    height: 18rem;
     background:rgb(38, 52, 80);
+    height: 18rem;
     display:inline-block;
     width:100%;
     text-align: center;
     position: absolute;
     bottom: -18rem;
-    line-height: 50px;
+    line-height: 1.5;
     /* margin: 4.5rem; */
 }
 
 #section1 h2 {
+    /* padding-top: 1.5rem; */
+    background:rgb(38, 52, 80);
     width:100%;
-    font-size: 2.6rem;
+    font-size: calc(2rem + 1.5vw);
     position: relative;
     top: 3.6rem;
 }
 
 #section1 p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    background:rgb(38, 52, 80);
     position: relative;
     top:4.5rem;
-    font-size: 1.2rem;
+    font-size: calc(1rem + 0.5vw);
+    margin-top: -1.5rem;
 }
 
 
 @media screen and (max-width:730px)  {
     
-    h1{
+    /* h1{
         font-size: 2rem;
         bottom: 40%;
         right: 10%;
         left: -10%;
-    }
-    .about-us{
+    } */
+    /* .about-us{
         position: absolute;
         bottom: 30%;
         left:-9%;
 
-    }
-    #section1{
+    } */
+    /* #section1{
         top:564px;
         line-height: normal;
     }
@@ -218,7 +190,7 @@ a {
         font-size:1.1rem;
         width: auto;
         
-    }
+    } */
 }
 
 /*
@@ -274,7 +246,7 @@ Section 2 Under V
 
 }
 
-@media screen and (max-width:600px) {
+/* @media screen and (max-width:600px) {
     .team{
         position: relative;
         top:120px;
@@ -299,12 +271,12 @@ Section 2 Under V
         display: none;
     }
     
-}
+} */
 
-/*
-Event Section 
+ /*
+Event Section  */
 
-.event {
+/* .event {
     position: absolute;
     bottom: 0;
     left: 20%;
@@ -364,4 +336,4 @@ Event Section
     color:white;
 
 }
-*/
+ */
