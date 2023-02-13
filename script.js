@@ -14,7 +14,7 @@ function respondNav() {
     // $("nav ul li").css("font-size", "calc(1rem + 0.5vw)");
     $("nav ul li").css("transform", "translate(0, 7rem)");
     $("nav ul").css("line-height", "2");
-    // $(".one").css("font-size", "calc(0.5rem + 1vw)");
+    $(".one").css("font-size", "calc(0.5rem + 1vw)");
     $(".one").css("width", "60%");
     $(".one").css("margin", "auto");
     $("nav ul").css("padding", "0");
@@ -25,7 +25,7 @@ function respondNav() {
     $("nav ul li").css("border-top", "0");
     $("nav ul").css("border-bottom", "0");
     $(".toggle-button").hide();
-    // $(".one").css("font-size", "1.1rem");
+    $(".one").css("font-size", "1.1rem");
     $(".one").css("width", "auto");
     $("nav ul li").css("font-size", "1.3rem");
     $("nav ul").css("margin-top", "1.5rem");
@@ -59,7 +59,7 @@ $(".toggle-button").click(function () {
   total++;
   $("nav ul li").css("display", "list-item");
   $("nav ul").css("background-color", "rgb(38, 52, 80)");
-  $("nav ul").css("height", "calc(60vh + 10vw)");
+  $("nav ul").css("height", "32rem");
   $("nav ul").css("width", "100vw");
   $("nav ul").animate({ height: 'toggle' }, 250);
   $(".container").css("filter", "brightness(40%)");
