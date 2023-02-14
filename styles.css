@@ -99,7 +99,7 @@ h1 {
   padding: 1.2rem 2.5rem 1.2rem 2.5rem;
   text-decoration: none;
   transition: color 0.2s;
-  display: inline-block;
+  /* display: inline-block; */
   background: aliceblue;
   border-radius: 4px;
   transition: ease .40s;
@@ -165,22 +165,22 @@ a {
 
 @media screen and (max-width:730px)  {
     
-     h1{
+     /* h1{
         font-size: 2rem;
         bottom: 40%;
         right: 10%;
         left: -10%;
-    } 
-     .about-us{
+    }  */
+     /* .about-us{
         position: absolute;
         bottom: 30%;
         left:-9%;
 
-    } 
-     #section1{
+    }  */
+     /* #section1{
         top:564px;
         line-height: normal;
-    }
+    } */
     #section1 h2{
         font-size:1.5rem;
         
@@ -195,78 +195,82 @@ a {
 /*
 Section 2 Under V 
 */
-#section2{
+#section2 {
+    /* background-color: #04DACA; */
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
     position: absolute;
-    height:600px;
-    bottom: -50rem;
-    margin-left: 3rem;
+    /* height:600px; */
+    bottom: -40rem;
+    left: calc(-8rem + 5vw);
 }
-.text h2{
+
+#section2 h2{
     position: relative;
     font-size:3rem;
-    top:200px;
     color:black;
-    left:50%;
     
 }
-.text p{
+
+#section2 p{
     position:relative;
-    font-size:1rem;
-    top:210px;
+    font-size:1.3rem;
+    /* top:210px; */
     color:black;
-    left:50%;
+    /* left:50%; */
     line-height: 1.6;
-    bottom:auto;
+    /* bottom:auto; */
+    margin-bottom: 2.5rem;
 }
-.team{
+.team {
     position: relative;
+    margin-bottom: 5rem;
     padding: 1.6rem 2rem 1.2rem 2.5rem;
-    top:250px;
-    left:50%;
-    background:aliceblue;
+    /* top:250px;
+    left:50%; */
+    /* background:aliceblue; */
     border-radius: 4px;
     font-size:1.3rem;
     background-color: rgb(38, 52, 80);
 }
 
 
-.hexagon{
-    display: inline-block;
-    bottom: -44rem;
-    left: 60%;
-    width: 400px;
-    height: 346px;
-    position: absolute;
+.polygon {
+    width: 30%;
+    height: auto;
+    /* margin-bottom: 2rem; */
+    /* position: absolute; */
     overflow: hidden;
-    -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    /* -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); */
 
 }
 
  @media screen and (max-width:600px) {
-    .team{
+    /* .team{
         position: relative;
         top:120px;
         right:100%;
         
-    }
-    #section2{
+    } */
+    /* #section2{
         position: relative;
         right:50%;
         font-size:1rem;
         
-    }
-    #section2 h2{
+    } */
+    /* #section2 h2{
         font-size:2rem;
         top:80px;
     }
     #section2 p{
         font-size:1rem;
         top:90px;
-    }
-    .hexagon{
+    } */
+    /* .hexagon{
         display: none;
-    }
+    } */
     
 } 
 
