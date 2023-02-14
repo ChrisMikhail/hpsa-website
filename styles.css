@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Times New Roman', Serif;
     box-sizing: border-box;
 }
 
@@ -196,14 +196,17 @@ a {
 Section 2 Under V 
 */
 #section2 {
-    /* background-color: #04DACA; */
-    width: 100vw;
+    width: 85%;
     display: flex;
     justify-content: space-evenly;
     position: absolute;
     /* height:600px; */
     bottom: -40rem;
-    left: calc(-8rem + 5vw);
+    margin: 0 auto;
+    padding: 3rem 0;
+    padding-right:30%;
+    
+    
 }
 
 #section2 h2{
@@ -234,68 +237,70 @@ Section 2 Under V
     font-size:1.3rem;
     background-color: rgb(38, 52, 80);
 }
+.hexagon {
+    position: absolute;
+    width: 35%;
+    padding-bottom: 30%;
+    clip-path: polygon(27% 0%, 73% 0%, 100% 27%, 100% 73%, 73% 100%, 27% 100%, 0% 73%, 0% 27%);
+    background: url('images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg');
+    background-size: cover;
+    top: 2%;
+    right:5%;
+    object-fit: cover;
+  }
 
-
-.polygon {
-    width: 30%;
-    height: auto;
-    /* margin-bottom: 2rem; */
-    /* position: absolute; */
-    overflow: hidden;
-    /* -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); */
-
-}
-
- @media screen and (max-width:600px) {
-    /* .team{
-        position: relative;
-        top:120px;
-        right:100%;
-        
-    } */
-    /* #section2{
-        position: relative;
-        right:50%;
-        font-size:1rem;
-        
-    } */
-    /* #section2 h2{
-        font-size:2rem;
-        top:80px;
+@media only screen and (max-width: 768px) {
+    #section2 {
+        flex-direction: column;
+        padding-right: 0;
+        bottom: -40rem;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
     }
-    #section2 p{
-        font-size:1rem;
-        top:90px;
-    } */
-    /* .hexagon{
-        display: none;
-    } */
+
+    #section2 h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #section2 p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .team {
+        padding: 1rem;
+        margin-bottom: 2.5rem;
+    }
+    .hexagon{
+        display:none;
+    }
     
-} 
+}
 
  /*
 Card Section  
 */
 
 .grid{
-    background-color: rgb(38, 52, 80);
+    background-color: #CBC3E3;
     position: absolute;
     display: flex;
     top:200%;
     justify-content: center;
-    color:black;
+    color: black;
     align-items: start;
     width:100%;
     line-height: 1.6;
 
 }
 .grid-item{
-    background-color: #fff;
-    border-radius: 0.4rem;
-    /* overflow:hidden; */
+    background-color: aliceblue;
+    border-radius: 1rem;
+     overflow:hidden; 
     transition:0.2s;
-    margin:1rem;
+    margin:1.6rem;
     max-height: fit-content;
     /* max-height: 50rem; */
     width: 100%;
@@ -315,8 +320,8 @@ Card Section
 }
 .card-header{
  font-size: 3rem;
-  font-weight:500;
-  color:#0d0d0d;
+  font-weight:bolder;
+  color:#2F4858;
   margin-bottom:1.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -330,6 +335,7 @@ Card Section
     margin-bottom: 2.5rem;
     text-align: center;
 
+
 }
 .card-btn{
     display:block;
@@ -337,19 +343,19 @@ Card Section
     padding:1.3rem;
     font-size: 1.2rem;
     text-align: center;
-    color:aliceblue;
+    color:#EAEAEA;
     border:none;
     border-radius: 0rem;
     transition: 0.2s;
     cursor:pointer;
     letter-spacing: 0.1rem;
-    background-color:rgb(38, 52, 80);
+    background-color:#2C3E50;
     
 }
 .card-btn span{
     margin-left: 1rem;
     transition: 0.2s;
-    color: aliceblue;
+    color: #CBC3E3;
     
     
 }
@@ -362,13 +368,13 @@ Card Section
 }
 @media only screen and (max-width: 768px) {
     .grid{
-        display:inline block;
+        display:flex;
+        flex-wrap: wrap;
 
     }
     .grid-item {
-        position: fixed;
-        width:90%;
-        margin:50px;
+        width:88%;
+        margin: 1rem;
 
     }
 
