@@ -198,9 +198,11 @@ Section 2 Under V
 #section2 {
     width: 85%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     position: absolute;
     /* height:600px; */
+    flex-direction: column;
+    align-items: center;
     bottom: -40rem;
     margin: 0 auto;
     padding: 3rem 0;
@@ -244,8 +246,9 @@ Section 2 Under V
     clip-path: polygon(27% 0%, 73% 0%, 100% 27%, 100% 73%, 73% 100%, 27% 100%, 0% 73%, 0% 27%);
     background: url('images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg');
     background-size: cover;
-    top: 2%;
-    right:5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(20%, -35%);
     object-fit: cover;
   }
 
@@ -284,7 +287,7 @@ Card Section
 */
 
 .grid{
-    background-color: #CBC3E3;
+    background-color: #fff;
     position: absolute;
     display: flex;
     top:200%;
@@ -296,7 +299,7 @@ Card Section
 
 }
 .grid-item{
-    background-color: aliceblue;
+    background-color: #dbf5fc;
     border-radius: 1rem;
      overflow:hidden; 
     transition:0.2s;
@@ -346,10 +349,11 @@ Card Section
     color:#EAEAEA;
     border:none;
     border-radius: 0rem;
-    transition: 0.2s;
+    transition: 1   s;
     cursor:pointer;
     letter-spacing: 0.1rem;
     background-color:#2C3E50;
+    margin-top: 1rem;
     
 }
 .card-btn span{
@@ -382,3 +386,93 @@ Card Section
         font-size: 2rem;
     }
 }
+/* below the grid section 
+*/
+
+.info2 {
+    font-size: 2rem;
+    position: absolute;
+    margin-top: 140%;
+    color: black;
+    align-items: center;
+    margin-right:30%;
+    
+    
+  }
+  
+  .info2 img {
+    width:43%;
+    margin-left:10%;
+    height:430px;
+    
+  }
+
+  .side-text{
+    position: relative;
+    align-items: center;
+    margin-left:29%;
+    bottom: 23.5rem;
+    left:40%;
+    line-height: 1.6;
+
+
+   
+  }
+  
+  .side-text h2{
+    position: relative;
+    padding-top:20px;
+    font-size:3rem;
+
+  }
+  .side-text p{
+    padding:1rem;
+    font-size:1.4rem;
+  }
+  .new-btn{
+    position: absolute;
+    padding: 1.6rem 2rem 1.2rem 2.5rem;
+    border-radius: 3px;
+    font-size:1.3rem;
+    background-color: rgb(38, 52, 80);
+    left:1rem;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .info2 {
+      margin-top: 240rem;
+      margin-right: 1rem;
+
+      width:fit-content;
+    }
+  
+    .info2 img {
+      width: 90%;
+      height: auto;
+    }
+  
+    .side-text {
+      margin: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+    }
+  
+    .side-text h2 {
+      font-size: 2rem;
+    }
+  
+    .side-text p {
+      font-size: 1.2rem;
+    }
+  
+    .new-btn {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      margin-top: 2rem;
+      left: 0;
+    }
+  }
+
+/* Footer */
