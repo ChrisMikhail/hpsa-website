@@ -70,3 +70,10 @@ $(".toggle-button").click(function () {
     $("body").css("overflow-y", "visible");
   }
 });
+
+document.getElementById('email-box').addEventListener('keypress', function(event) {
+  if (event.keyCode === 13) { // 13 is the keycode for the enter key
+    event.preventDefault(); // prevent the default behavior of the enter key
+    document.getElementById('email-btn').click(); // programmatically click the "Sign Up" button
+  }
+});
