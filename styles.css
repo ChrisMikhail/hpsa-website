@@ -702,3 +702,65 @@ Card Section
 
 
       }
+
+/* Footer section */
+.footer{
+    position: absolute;
+    top:50rem;
+    background-color: #24262b;
+    width: 98.5vw;
+    padding: 70px;
+    margin: auto;
+    line-height: 1.6;
+}
+.rows{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+
+.footer-col h3{
+    position: relative;
+    font-weight: bold;
+    left:120%;
+    color: #ffff;
+
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+    
+
+}
+.footer-col h4{
+    position: relative;
+    font-size:2rem;
+    color:#ffff;
+    margin-bottom: 1rem ;
+    font-weight: 500;
+    top:3rem;
+    content: '';
+    left:50%;
+
+
+    
+}
+.footer-col ul{
+    position: relative;
+    right:-120%;
+
+
+}
+.footer-col ul li a{
+    font-size:2rem;
+    color:#ffff;
+    text-decoration: none;
+    display:block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color:#fff;
+    padding-left: 0.8rem;;
+}
