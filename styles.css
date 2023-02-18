@@ -14,6 +14,7 @@ body {
     color: aliceblue;
     display:grid;
     background-repeat: no-repeat;
+    
 }
 
 html{
@@ -281,6 +282,30 @@ Section 2 Under V
     }
     
 }
+@media screen and (min-width: 769px ) and (max-width:1366px){
+    .hexagon{
+        margin-right:200rem;
+    }
+    
+  }
+  @media screen and (min-width: 1920px) {
+    #section2{
+        position: absolute;
+        margin-bottom: -100px;
+        
+    }
+    #section2 h2{
+        font-size:4.3rem;
+
+    }
+    #section2 p{
+        font-size:1.5rem;
+        line-height:2
+    }
+   
+  }
+  
+
 
  /*
 Card Section  
@@ -392,7 +417,7 @@ Card Section
 .info2 {
     font-size: 2rem;
     position: absolute;
-    margin-top: 140%;
+    margin-top: 135%;
     color: black;
     align-items: center;
     margin-right:30%;
@@ -411,7 +436,7 @@ Card Section
     position: relative;
     align-items: center;
     margin-left:29%;
-    bottom: 23.5rem;
+    bottom: 27rem;
     left:40%;
     line-height: 1.6;
 
@@ -422,12 +447,16 @@ Card Section
   .side-text h2{
     position: relative;
     padding-top:20px;
-    font-size:3rem;
+    font-size:2.8rem;
 
   }
   .side-text p{
     padding:1rem;
-    font-size:1.4rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items:center;
+    width:80%;
+    
   }
   .new-btn{
     position: absolute;
@@ -440,15 +469,17 @@ Card Section
   
   @media only screen and (max-width: 768px) {
     .info2 {
-      margin-top: 240rem;
+      margin-top: 250rem;
       margin-right: 1rem;
 
       width:fit-content;
     }
   
     .info2 img {
+        position: relative;
       width: 90%;
       height: auto;
+      right:10px;
     }
   
     .side-text {
@@ -463,7 +494,9 @@ Card Section
     }
   
     .side-text p {
+        position: relative;
       font-size: 1.2rem;
+      left:10%;
     }
   
     .new-btn {
@@ -475,4 +508,197 @@ Card Section
     }
   }
 
-/* Footer */
+  @media screen and (min-width: 769px ) and (max-width:1452px){
+    .info2 {
+        position: absolute;
+        margin-top: 140rem;
+      }
+    
+  }
+  @media screen and (min-width: 1920px){
+    .info2 img{
+        width:50%;
+        height:50%;
+        position: relative;
+        bottom:10rem;
+
+    }
+
+    .info2 h2{
+        font-size:4.3rem;
+    }
+    .info2 p{
+        font-size:1.5rem;
+    }
+    .side-text {
+        position: relative;
+        bottom:35rem;
+    }
+  }
+
+
+
+  /* Email Section*/ 
+  .section-separator{
+    width:100%;
+    
+  }
+    .left-text h2{
+        position: absolute;
+        bottom:2rem;
+        font-size:2.5rem;
+        line-height: 1.35;
+        width:80%;
+        left:12%;
+
+    }
+
+
+    .email-sect{
+        position: absolute;
+        left: 95%;
+        top:70%;
+
+    }
+    .email-sect p{
+        position: relative;
+        line-height: 1.4;
+        font-size: 1.6rem;
+        padding-bottom:2rem;
+        right:20rem;
+        max-width: 100%;
+
+    }
+    .email-input-container {
+        position: relative;
+        display: flex;
+        right:20rem;
+    }
+
+
+    #email-box{
+        display: inline-block;
+        width: 350px;
+        height: 60px;
+        outline: #C1C1C2;
+        outline-offset: -2px;
+        padding: 1.3rem;
+        margin:0.5rem;
+        font-size:1.3rem;
+    }
+
+    #email-btn{
+        position: relative;
+        display: inline-block;
+        width: 150px;
+        height: 60px;
+        color: white;
+        background-color: rgb(38, 52, 80);
+        font-size: 1.2rem;
+        white-space: nowrap;
+        top: 0.4rem;
+        cursor: pointer;
+
+    }
+    #email-btn:hover{
+        transition: color 0.2s;
+        text-decoration: none;
+        transition:ease .40s;
+        filter: brightness(50%);
+    }
+
+    @media (max-width: 767px) { /*phone media query*/
+        .left-text h2 {
+          position: static;
+          font-size: 2rem;
+          line-height: 1.3;
+          width: 100%;
+          left: 0;
+          text-align: center;
+        }
+      
+        .email-sect {
+          position: static;
+          margin-top: 2rem;
+          text-align: center;
+        }
+      
+        .email-sect p {
+          position: static;
+          line-height: 1.4;
+          font-size: 1.2rem;
+          padding-bottom: 1rem;
+          white-space: normal;
+        }
+      
+        .email-input-container {
+          position: static;
+          display: block;
+          margin: 0 auto;
+        }
+      
+        #email-box {
+          display: block;
+          width: 98%;
+          height: 3rem;
+          margin-bottom: 1rem;
+          font-size: 1rem;
+        }
+      
+        #email-btn {
+          position: static;
+          display: block;
+          width: 100%;
+          height: 3rem;
+          font-size: 1rem;
+          margin: 0 auto;
+          margin-top: 1rem;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 1452px) {
+        .left-text h2 {
+          font-size: 2rem;
+        }
+      
+        .email-sect {
+          max-width: 95%;
+          left: 90%;
+          top: 75%;
+        }
+      
+        .email-sect p {
+             max-width: 100%;
+          font-size: 1.4rem;
+          padding-bottom: 1rem;
+          right: 20%;
+        }
+      
+        #email-box {
+         position: relative;
+          width: 300px;
+          height: 50px;
+          font-size: 1.1rem;
+          left:40%;
+        }
+      
+        #email-btn {
+        position: relative;
+          width: 120px;
+          height: 50px;
+          left:40%;
+          
+        }
+      }
+      @media screen and (min-width: 1920px) {
+       .left-text h2{
+        font-size:3.4rem;
+        top:50%;
+
+       }
+       .email-sect{
+        top:60%;
+       }
+
+
+
+      }
