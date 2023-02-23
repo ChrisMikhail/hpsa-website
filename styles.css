@@ -14,6 +14,7 @@ body {
     color: aliceblue;
     display:grid;
     background-repeat: no-repeat;
+    overflow-x: hidden;
     
 }
 
@@ -153,14 +154,14 @@ a {
 }
 
 #section1 p {
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     padding-bottom: 2rem;
     width: 100%;
     background:rgb(38, 52, 80);
     position: relative;
     top:4.5rem;
     font-size: calc(1rem + 0.5vw);
-    margin-top: -1.5rem;
+    margin-top: -1.0rem;
 }
 
 
@@ -198,14 +199,14 @@ Section 2 Under V
 */
 #section2 {
     width: 100%;
-    display: flex;
+    /* display: flex; */
     /* justify-content: space-around; */
     position: absolute;
     /* height:600px; */
-    /* flex-direction: column; */
+    flex-direction: column;
     align-items: center;
     bottom: -40rem;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     padding: 3rem 0;
     padding-right:30%;
     /* background-color:#04DACA; */
@@ -226,7 +227,7 @@ Section 2 Under V
     color:black;
     left: 1.5rem;
     line-height: 1.6;
-    /* bottom:auto; */
+    bottom:auto;
     margin-bottom: 2.5rem;
 }
 .team {
@@ -241,27 +242,29 @@ Section 2 Under V
     background-color: rgb(38, 52, 80);
 }
 .hexagon {
-    float: right;
+    /* float: right; */
     position:absolute;
-    width: 30vw;
-    padding-bottom: 25vw;
+    width: 28vw;
+    height: 20vw;
+    /* margin-left:15px; */
     clip-path: polygon(27% 0%, 73% 0%, 100% 27%, 100% 73%, 73% 100%, 27% 100%, 0% 73%, 0% 27%);
-    background: url('images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg');
+    /* background: url('images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg'); */
     background-size: cover;
-    top: 5%;
-    left: 60vw;
+    top: calc(2rem + 0vw);
+    left: 66vw;
     /* transform: translate(20%, -35%); */
     object-fit: cover;
   }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
     #section2 {
-        flex-direction: column;
+        /* flex-direction: column; */
         padding-right: 0;
-        bottom: -40rem;
+        bottom: -35rem;
         left: 0;
-        width: 100%;
-        padding: 2rem;
+        width: 450px;
+        overflow-wrap: break-word;
+        /* padding: 2rem; */
     }
 
     #section2 h2 {
@@ -278,14 +281,16 @@ Section 2 Under V
         padding: 1rem;
         margin-bottom: 2.5rem;
     }
+}
+@media only screen and (max-width: 503px) {
     .hexagon{
         display:none;
     }
-    
 }
+
 @media screen and (min-width: 769px ) and (max-width:1366px){
     .hexagon{
-        margin-right:200rem;
+        /* margin-right:200rem; */
     }
     
   }
@@ -312,63 +317,59 @@ Section 2 Under V
 Card Section  
 */
 
-.grid{
-    background-color: #fff;
-    position: absolute;
-    display: grid;
-    bottom: -90rem;
-    justify-content: center;
-    color: black;
-    /* align-items: start; */
+.card-container{
+    position: fixed;
     width:100%;
-    /* line-height: 1.6; */
-    gap: 1rem;
-    grid-template-columns: 23% 23% 23% 23%;
-    /* grid-auto-rows: 1fr; */
+    margin:50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    top: 190vh;
+    box-sizing: border-box;
+
+    
 }
-.grid-item{
-    background-color: #dbf5fc;
-    border-radius: 1rem;
-    overflow:hidden; 
-    transition:0.2s;
-    max-height: fit-content;
-    /* max-height: 50rem; */
-    width: 100%;
-}
-.grid-item:hover{
-    transform:translateY(-0.5%);
+.cards{
+    background-color:#dbf5fc;
+    display: grid;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-template-rows: auto 1fr;
+    border-radius: 18px;
+    transition: 0.3s;
+    
 
 }
-.card-img{
-    width:100%;
-    height:20rem;
+.cards:hover{
+    transform: translateY(-0.5%);
+    
+}
+.card-image{
+    border-radius: 18px;
+    height: 26rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    
+    
+}
+.card-image img {
+    max-width: 100%;
+    height: 100%;
     object-fit: cover;
 }
-.card-content{
-    padding: 1rem;
-
-}
-.card-header{
- font-size: 3rem;
-  font-weight:bolder;
-  color:#2F4858;
-  margin-bottom:1.5rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-
-}
 .card-text{
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
-    line-height:1.6;
-    margin-bottom: 2.5rem;
+    color:black;
+    padding:20px 10px;
     text-align: center;
-
-
+    font-size:1.3rem;
+    line-height: 1.6;
+    letter-spacing: 0.1rem;
 }
 .card-btn{
-    display:block;
+    position: relative;
     width:100%;
     padding:1.3rem;
     font-size: 1.2rem;
@@ -376,7 +377,7 @@ Card Section
     color:#EAEAEA;
     border:none;
     border-radius: 0rem;
-    transition: 1   s;
+    transition: 0.2s;
     cursor:pointer;
     letter-spacing: 0.1rem;
     background-color:#2C3E50;
@@ -394,51 +395,53 @@ Card Section
     background-color: rgb(38, 52, 80);
 }
 .card-btn:hover span{
-    margin-left:1.2rem;
+    margin-left:1.5rem;
 
 }
-
-@media only screen and (max-width: 966px) {
-    .grid{
-        grid-template-columns: 45% 45%;
-        /* bottom: -250vh; */
-    }
-}
-/* @media only screen and (max-width: 768px) {
-    .grid{
+@media only screen and (max-width: 768px) {
+    .card-container{
         display:flex;
         flex-wrap: wrap;
 
     }
-    .grid-item {
-        width:88%;
-        margin: 1rem;
+    .cards{
+        width:100%;
 
     }
+    
 
-    .card-header {
-        font-size: 2rem;
+    .card-text {
+        font-size: 1.2rem;
     }
-} */
+}
+
+@media screen and (max-width: 1024px) {
+    .card-container {
+      grid-template-columns: repeat(2, 1fr);
+      width:100vw;
+    }
+  }
+
 /* below the grid section 
 */
 
 .info2 {
     font-size: 2rem;
     position: absolute;
-    margin-top: 135%;
+    /* margin-top: 0rem; */
     color: black;
     align-items: center;
     margin-right:30%;
-    
+    /* background-color: #04DACA; */
     
   }
   
   .info2 img {
+    position: relative;
     width:43%;
     margin-left:10%;
     height:430px;
-    
+    top: 2.6rem;
   }
 
   .side-text{
@@ -480,7 +483,6 @@ Card Section
     .info2 {
       margin-top: 250rem;
       margin-right: 1rem;
-
       width:fit-content;
     }
   
@@ -544,6 +546,8 @@ Card Section
         bottom:35rem;
     }
   }
+
+  
 
 
 
@@ -775,4 +779,38 @@ ul{
 .footer-col ul li a:hover{
     color:#fff;
     padding-left: 0.8rem;;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        position: relative;
+        top:0;
+        max-width: 100vw;
+
+    }
+    .rows{
+        justify-content: space-between;
+    }
+    .footer-col{
+        font-size: 1rem;
+        width: 10%;
+    }
+    .footer-col h3 {
+        position: relative;
+        font-size: 1.5rem;
+        text-align: center;
+        margin:0;
+
+        
+      }
+      .footer-col h4 {
+        position: relative;
+        font-size: 1.1rem;
+        margin-left: -5rem; 
+        white-space: wrap;
+        
+      }
+      .footer-col ul li a {
+        font-size: 1.2rem;
+      }
 }
