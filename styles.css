@@ -257,15 +257,7 @@ Section 2 Under V
   }
 
 @media only screen and (max-width: 900px) {
-    #section2 {
-        /* flex-direction: column; */
-        padding-right: 0;
-        bottom: -35rem;
-        left: 0;
-        width: 450px;
-        overflow-wrap: break-word;
-        /* padding: 2rem; */
-    }
+    
 
     #section2 h2 {
         font-size: 2rem;
@@ -433,21 +425,22 @@ Card Section
     align-items: center;
     margin-right:30%;
     /* background-color: #04DACA; */
+    top:130vw;
     
   }
   
   .info2 img {
     position: relative;
     width:43%;
-    margin-left:10%;
-    height:430px;
-    top: 2.6rem;
+    margin-left:5vw;
+    height:400px;
+    top: 1vw;
   }
 
   .side-text{
     position: relative;
     align-items: center;
-    margin-left:29%;
+    margin-left:20vw;
     bottom: 27rem;
     left:40%;
     line-height: 1.6;
@@ -458,7 +451,7 @@ Card Section
   
   .side-text h2{
     position: relative;
-    padding-top:20px;
+    padding-top:2rem;
     font-size:2.8rem;
 
   }
@@ -479,15 +472,16 @@ Card Section
     left:1rem;
   }
   
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) { /*Phone Media query*/
     .info2 {
-      margin-top: 250rem;
-      margin-right: 1rem;
-      width:fit-content;
+        position: absolute;
+        top:580vh !important;
+        margin-right: 1rem;
+        width:fit-content;
     }
   
     .info2 img {
-        position: relative;
+      position: relative;
       width: 90%;
       height: auto;
       right:10px;
@@ -519,10 +513,10 @@ Card Section
     }
   }
 
-  @media screen and (min-width: 769px ) and (max-width:1452px){
+  @media screen and (min-width: 769px ) and (max-width:1452px){ /*Laptop media query */
     .info2 {
         position: absolute;
-        margin-top: 140rem;
+        top:180vw;
       }
     
   }
@@ -536,7 +530,7 @@ Card Section
     }
 
     .info2 h2{
-        font-size:4.3rem;
+        font-size:3.8rem;
     }
     .info2 p{
         font-size:1.5rem;
@@ -558,11 +552,11 @@ Card Section
   }
     .left-text h2{
         position: absolute;
-        bottom:2rem;
         font-size:2.5rem;
         line-height: 1.35;
-        width:80%;
+        width:90vw;
         left:12%;
+        margin-top: 5vw;
 
     }
 
@@ -571,7 +565,6 @@ Card Section
         position: absolute;
         left: 95%;
         top:70%;
-
     }
 
     .email-sect p{
@@ -671,20 +664,17 @@ Card Section
       }
       @media screen and (min-width: 768px) and (max-width: 1452px) {
         .left-text h2 {
-          font-size: 2rem;
+         position: absolute;
+          font-size: 2.5rem;
+          top:59vh;
+          left:8vw;
         }
       
-        .email-sect {
-          max-width: 95%;
-          left: 90%;
-          top: 75%;
-        }
-      
+
         .email-sect p {
-             max-width: 100%;
           font-size: 1.4rem;
           padding-bottom: 1rem;
-          right: 20%;
+          right: 25vh;
         }
       
         #email-box {
@@ -692,29 +682,26 @@ Card Section
           width: 300px;
           height: 50px;
           font-size: 1.1rem;
-          left:40%;
+          left:10vw;
         }
       
         #email-btn {
         position: relative;
           width: 120px;
           height: 50px;
-          left:40%;
+          left:10vw;
           
         }
       }
       @media screen and (min-width: 1920px) {
        .left-text h2{
         font-size:3.4rem;
-        top:50%;
+        top:45vh;
 
        }
        .email-sect{
-        top:60%;
+        top:60vh;
        }
-
-
-
       }
 
 /* Footer section */
