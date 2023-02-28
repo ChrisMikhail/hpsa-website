@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
 body {
     height: 100vh;
-    width: 100%;
+    width: 100;
     background: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url(images/medical.png);
     background-size: cover;
     background-position: center;
@@ -15,6 +18,7 @@ body {
     display:grid;
     background-repeat: no-repeat;
     overflow-x: hidden;
+
     
 }
 
@@ -85,17 +89,20 @@ nav ul li a {
 .one:hover {
     filter: brightness(50%);
 }
+.container{
+  min-height: 50px;
+}
 h1 {
-    left: 1.5rem;
-    width: fit-content;
-    position: absolute;
-    bottom: 25%;
-    font-size: calc(1.8rem + 1.2vw);
+  left: 1.5rem;
+  width: fit-content;
+  position: absolute;
+  bottom: 25%;
+  font-size: calc(1.8rem + 1.2vw);
 }
 
 .about-us {
-  position: absolute;
-  bottom: 14%;
+  position: relative;
+  bottom: -80%;
   left: 1.6rem;
   color: black;
   padding: 1.2rem 2.5rem 1.2rem 2.5rem;
@@ -136,18 +143,19 @@ a {
 #section1 {
     background:rgb(38, 52, 80);
     height: 18rem;
-    display:inline-block;
-    width:100%;
+    max-width:100%;
     text-align: center;
-    position: absolute;
-    bottom: -18rem;
+    position: relative;
+    top:90vh;
     line-height: 1.5;
-    /* margin: 4.5rem; */
+    min-height: 100px;
+   
+
 }
 
 #section1 h2 {
     background:rgb(38, 52, 80);
-    width:100%;
+    width:100vw;
     font-size: 2.5em;
     position: relative;
     top: 3.6rem;
@@ -157,7 +165,7 @@ a {
     padding-top: 1.5rem;
     padding-bottom: 2rem;
     width: 100%;
-    background:rgb(38, 52, 80);
+
     position: relative;
     top:4.5rem;
     font-size: calc(1rem + 0.5vw);
@@ -201,41 +209,46 @@ Section 2 Under V
     width: 100%;
     /* display: flex; */
     /* justify-content: space-around; */
-    position: absolute;
+    position: relative;
     /* height:600px; */
     flex-direction: column;
     align-items: center;
-    bottom: -40rem;
+    bottom: -90%;
     margin: 0 auto;
     padding: 3rem 0;
-    padding-right:30%;
+    padding-right:30vw;
     /* background-color:#04DACA; */
+    min-height:20px;
+   
+  
+    
     
 }
 
 #section2 h2{
     position: relative;
-    font-size:3rem;
+    font-size:4rem;
     color:black;
-    left: 1.5rem;
+    left: 15.5vw;
 }
 
 #section2 p{
     position:relative;
-    font-size:1.3rem;
+    font-size:1.6rem;
     /* top:210px; */
     color:black;
-    left: 1.5rem;
+    left: 15.5vw;
     line-height: 1.6;
     bottom:auto;
     margin-bottom: 2.5rem;
+    
 }
 .team {
     position: relative;
     margin-bottom: 5rem;
     padding: 1.6rem 2rem 1.2rem 2.5rem;
     /* top:250px; */
-    left: 1.5rem;
+    left: 15.5vw;
     /* background:aliceblue; */
     border-radius: 4px;
     font-size:1.3rem;
@@ -254,8 +267,24 @@ Section 2 Under V
     left: 66vw;
     /* transform: translate(20%, -35%); */
     object-fit: cover;
+    display: flex;
+    justify-content: space-evenly;
   }
 
+
+  @media only screen and (max-width: 767px) {
+    #section2 h2{
+        top:-5vh
+    }
+    #section2 p{
+        top:-5vh;
+    }
+    .team{
+        top:-5vh;
+    }
+
+  }
+  
 @media only screen and (max-width: 900px) {
     
 
@@ -279,29 +308,7 @@ Section 2 Under V
         display:none;
     }
 }
-
-@media screen and (min-width: 769px ) and (max-width:1366px){
-    .hexagon{
-        /* margin-right:200rem; */
-    }
-    
-  }
-  @media screen and (min-width: 1920px) {
-    #section2{
-        position: absolute;
-        margin-bottom: -100px;
-        
-    }
-    #section2 h2{
-        font-size:4.3rem;
-
-    }
-    #section2 p{
-        font-size:1.5rem;
-        line-height:2
-    }
-   
-  }
+ 
   
 
 
@@ -310,14 +317,19 @@ Card Section
 */
 
 .card-container{
-    position: fixed;
-    width:100%;
-    margin:50px auto;
+    position: relative;
+    max-width:100%;
+    margin:auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 25px;
-    top: 190vh;
+    grid-gap: 1rem;
+    top:110%;
     box-sizing: border-box;
+    padding: 0 50px;
+    margin-top: 5rem; 
+    min-height: 100px;
+    
+   
 
     
 }
@@ -328,12 +340,16 @@ Card Section
     justify-content: space-between;
     grid-template-rows: auto 1fr;
     border-radius: 18px;
-    transition: 0.3s;
+    transition: 0.1s ease;
+    
+    
     
 
 }
 .cards:hover{
     transform: translateY(-0.5%);
+
+
     
 }
 .card-image{
@@ -353,12 +369,20 @@ Card Section
     object-fit: cover;
 }
 .card-text{
+    font-weight: normal;
+    font-family: 'Times New Roman', Serif;
     color:black;
-    padding:20px 10px;
     text-align: center;
-    font-size:1.3rem;
+    font-size:1.2rem;
     line-height: 1.6;
     letter-spacing: 0.1rem;
+    display: flex; 
+    flex-direction: column; 
+
+
+}
+.card-text h2{
+    max-height: fit-content;
 }
 .card-btn{
     position: relative;
@@ -373,7 +397,7 @@ Card Section
     cursor:pointer;
     letter-spacing: 0.1rem;
     background-color:#2C3E50;
-    margin-top: 1rem;
+    margin-top: auto; 
     
 }
 .card-btn span{
@@ -391,159 +415,172 @@ Card Section
 
 }
 @media only screen and (max-width: 768px) {
-    .card-container{
-        display:flex;
-        flex-wrap: wrap;
-
-    }
-    .cards{
-        width:100%;
-
-    }
-    
-
-    .card-text {
-        font-size: 1.2rem;
-    }
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 25px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
     .card-container {
-      grid-template-columns: repeat(2, 1fr);
       width:100vw;
     }
   }
 
-/* below the grid section 
-*/
-
-.info2 {
-    font-size: 2rem;
-    position: absolute;
-    /* margin-top: 0rem; */
-    color: black;
-    align-items: center;
-    margin-right:30%;
-    /* background-color: #04DACA; */
-    top:130vw;
-    
-  }
   
-  .info2 img {
-    position: relative;
-    width:43%;
-    margin-left:5vw;
-    height:400px;
-    top: 1vw;
-  }
 
-  .side-text{
+
+
+
+
+
+/* below the grid section */
+
+  .info2-container {
     position: relative;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    margin-left:20vw;
-    bottom: 27rem;
-    left:40%;
-    line-height: 1.6;
-
+    top:110vh;
+    margin-left: 9rem;
+    max-width: 100vw;
+    
 
    
-  }
-  
-  .side-text h2{
-    position: relative;
-    padding-top:2rem;
-    font-size:2.8rem;
+
 
   }
-  .side-text p{
-    padding:1rem;
-    font-size: 1.3rem;
-    display: flex;
-    align-items:center;
-    width:80%;
+  
+  .info-image img {
+    position: relative;
+    max-width: 50vw;
+    max-height: 52vh;
+
+    
     
   }
-  .new-btn{
-    position: absolute;
-    padding: 1.6rem 2rem 1.2rem 2.5rem;
+  
+  .side-info {
+    color: black;
+  }
+  .content{
+    margin: 6em;
+    max-width:80vh;
+  
+
+
+
+
+  }
+  .content h2{
+    position: relative;
+    font-size: 3rem;
+    bottom:2.3rem;
+    white-space: nowrap;
+   
+
+
+  }
+  .content p{
+    display: flex;
+    font-size:1.7rem;
+    line-height: 1.6;
+    width:100%;
+    padding: 0.5rem;
+  }
+
+  
+  .new-btn {
+    position: relative;
+    top:3rem;
+    padding: 1.6em 2em 1.2em 2.5em;
     border-radius: 3px;
     font-size:1.3rem;
     background-color: rgb(38, 52, 80);
-    left:1rem;
+    
+    
   }
-  
-  @media only screen and (max-width: 768px) { /*Phone Media query*/
-    .info2 {
-        position: absolute;
-        top:580vh !important;
-        margin-right: 1rem;
-        width:fit-content;
+
+  @media only screen and (min-width: 769px) and (max-width: 1366px) { /* Laptop media query*/
+    .info2-container {
+      flex-direction: row;
+      margin-left: 0;
     }
   
-    .info2 img {
-      position: relative;
-      width: 90%;
-      height: auto;
-      right:10px;
-    }
+   
   
-    .side-text {
+    .content {
       margin: 0;
-      bottom: 0;
-      left: 0;
-      text-align: center;
+      padding: 0 2em;
     }
   
-    .side-text h2 {
+    .content h2 {
       font-size: 2rem;
+      bottom: 0;
     }
   
-    .side-text p {
-        position: relative;
-      font-size: 1.2rem;
-      left:10%;
+    .content p {
+      font-size: 1.5rem;
+      width: 100%;
+      padding: 0.8em;
     }
   
     .new-btn {
-      position: relative;
-      display: block;
-      margin: 0 auto;
-      margin-top: 2rem;
-      left: 0;
+      top: 2rem;
+      padding: 1.2em 1.8em 1em 2em;
+      font-size: 1.1rem;
     }
   }
+    @media only screen and (max-width: 768px) { /*Mobile Media query */
+        .info2-container {
+          position: relative;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 20px auto;
+          padding: 2rem;
+          top:520vh;
+          
+        }
+        
+        .info-image img {
+          max-width: 80vw;
+          max-height: auto;
+          margin-bottom: 4rem;
+        }
+        
+        .content {
+          width: 100vw;
+          text-align: center;
+          margin: 0;
+          font-size: 1.3rem;
 
-  @media screen and (min-width: 769px ) and (max-width:1452px){ /*Laptop media query */
-    .info2 {
-        position: absolute;
-        top:180vw;
+          
+        }
+        
+        .content h2 {
+          display: inline;
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+        
+        .content p {
+          font-size: 1.4rem;
+          line-height: 1.5;
+          padding: 0.5rem;
+        }
+        
+        .new-btn {
+
+            position: relative;
+            display: block;
+           
+        }
       }
-    
-  }
-  @media screen and (min-width: 1920px){
-    .info2 img{
-        width:50%;
-        height:50%;
-        position: relative;
-        bottom:10rem;
 
-    }
-
-    .info2 h2{
-        font-size:3.8rem;
-    }
-    .info2 p{
-        font-size:1.5rem;
-    }
-    .side-text {
-        position: relative;
-        bottom:35rem;
-    }
-  }
-
-  
-
-
+      
+     
 
   /* Email Section*/ 
   .section-separator{
@@ -662,47 +699,7 @@ Card Section
           margin-top: 1rem;
         }
       }
-      @media screen and (min-width: 768px) and (max-width: 1452px) {
-        .left-text h2 {
-         position: absolute;
-          font-size: 2.5rem;
-          top:59vh;
-          left:8vw;
-        }
-      
 
-        .email-sect p {
-          font-size: 1.4rem;
-          padding-bottom: 1rem;
-          right: 25vh;
-        }
-      
-        #email-box {
-         position: relative;
-          width: 300px;
-          height: 50px;
-          font-size: 1.1rem;
-          left:10vw;
-        }
-      
-        #email-btn {
-        position: relative;
-          width: 120px;
-          height: 50px;
-          left:10vw;
-          
-        }
-      }
-      @media screen and (min-width: 1920px) {
-       .left-text h2{
-        font-size:3.4rem;
-        top:45vh;
-
-       }
-       .email-sect{
-        top:60vh;
-       }
-      }
 
 /* Footer section */
 .footer{
