@@ -91,6 +91,8 @@ nav ul li a {
 }
 .container{
   min-height: 50px;
+  overflow-x: clip;
+
 }
 h1 {
   left: 1.5rem;
@@ -103,6 +105,7 @@ h1 {
 .about-us {
   position: relative;
   bottom: -80%;
+  transform: translateY(-80%);
   left: 1.6rem;
   color: black;
   padding: 1.2rem 2.5rem 1.2rem 2.5rem;
@@ -113,7 +116,6 @@ h1 {
   border-radius: 4px;
   transition: ease .40s;
   font-size: 1rem;
-  z-index: 3;
 }
 
 .about-us:hover{
@@ -147,7 +149,7 @@ a {
     text-align: center;
     position: relative;
     top:90vh;
-    line-height: 1.5;
+    line-height: 1.4;
     min-height: 100px;
    
 
@@ -197,7 +199,7 @@ a {
     }
     #section1 p{
         font-size:1.1rem;
-        width: auto;
+        
         
     } 
 }
@@ -219,6 +221,7 @@ Section 2 Under V
     padding-right:30vw;
     /* background-color:#04DACA; */
     min-height:20px;
+    min-width: 200px;
    
   
     
@@ -229,18 +232,20 @@ Section 2 Under V
     position: relative;
     font-size:4rem;
     color:black;
-    left: 15.5vw;
+    left: 12.5vw;
 }
 
 #section2 p{
     position:relative;
-    font-size:1.6rem;
-    /* top:210px; */
+    font-size:1.5rem;
     color:black;
-    left: 15.5vw;
+    left: 12.5vw;
     line-height: 1.6;
     bottom:auto;
     margin-bottom: 2.5rem;
+    display: block;
+    width:50%;
+
     
 }
 .team {
@@ -248,65 +253,61 @@ Section 2 Under V
     margin-bottom: 5rem;
     padding: 1.6rem 2rem 1.2rem 2.5rem;
     /* top:250px; */
-    left: 15.5vw;
+    left: 12.5vw;
     /* background:aliceblue; */
     border-radius: 4px;
     font-size:1.3rem;
     background-color: rgb(38, 52, 80);
 }
 .hexagon {
-    /* float: right; */
-    position:absolute;
-    width: 28vw;
-    height: 20vw;
-    /* margin-left:15px; */
-    clip-path: polygon(27% 0%, 73% 0%, 100% 27%, 100% 73%, 73% 100%, 27% 100%, 0% 73%, 0% 27%);
-    /* background: url('images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg'); */
-    background-size: cover;
-    top: calc(2rem + 0vw);
-    left: 66vw;
-    /* transform: translate(20%, -35%); */
-    object-fit: cover;
-    display: flex;
-    justify-content: space-evenly;
-  }
+  position: absolute;
+  width: 28vw; /* adjust the width to fit the screen */
+  height: 20vw; /* adjust the height proportionally */
+  clip-path: polygon(27% 0%, 73% 0%, 100% 27%, 100% 73%, 73% 100%, 27% 100%, 0% 73%, 0% 27%);
+  background-size: cover;
+  top:60%;
+  left: 80%; /* adjust the right value to move the element to the desired position */
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 
 
   @media only screen and (max-width: 767px) {
+    #section2{
+      max-width: 100vw;
+    }
     #section2 h2{
-        top:-5vh
+        top:12vh;
+        font-size:2.5em;
     }
     #section2 p{
-        top:-5vh;
+      width:100%;
+        top:15vh;
+        font-size:1.3em;
+        line-height: 1.3;
     }
     .team{
-        top:-5vh;
+        top:15vh;
     }
+    .hexagon{
+      display: none;
+    }
+  
 
   }
   
-@media only screen and (max-width: 900px) {
-    
 
-    #section2 h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    #section2 p {
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .team {
-        padding: 1rem;
-        margin-bottom: 2.5rem;
-    }
-}
-@media only screen and (max-width: 503px) {
-    .hexagon{
-        display:none;
-    }
+@media only screen and (max-width: 952px) {
+  .hexagon {
+    width: 30vw;
+    height: 28.5vw;
+    left: 80%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+  }
 }
  
   
@@ -326,7 +327,7 @@ Card Section
     top:110%;
     box-sizing: border-box;
     padding: 0 50px;
-    margin-top: 5rem; 
+
     min-height: 100px;
     
    
@@ -348,7 +349,6 @@ Card Section
 }
 .cards:hover{
     transform: translateY(-0.5%);
-
 
     
 }
@@ -444,6 +444,7 @@ Card Section
     top:110vh;
     margin-left: 9rem;
     max-width: 100vw;
+    min-height: 300px;
     
 
    
@@ -453,8 +454,8 @@ Card Section
   
   .info-image img {
     position: relative;
-    max-width: 50vw;
-    max-height: 52vh;
+    max-width: 45vw;
+    max-height: 50vh;
 
     
     
@@ -474,19 +475,20 @@ Card Section
   }
   .content h2{
     position: relative;
-    font-size: 3rem;
+    font-size: 2.4rem;
     bottom:2.3rem;
     white-space: nowrap;
+    left:0.3rem;
    
 
 
   }
   .content p{
     display: flex;
-    font-size:1.7rem;
+    font-size:1.6rem;
     line-height: 1.6;
     width:100%;
-    padding: 0.5rem;
+    padding: 0.7rem;
   }
 
   
@@ -498,7 +500,6 @@ Card Section
     font-size:1.3rem;
     background-color: rgb(38, 52, 80);
     
-    
   }
 
   @media only screen and (min-width: 769px) and (max-width: 1366px) { /* Laptop media query*/
@@ -507,22 +508,26 @@ Card Section
       margin-left: 0;
     }
   
-   
-  
+
     .content {
-      margin: 0;
-      padding: 0 2em;
+      margin: 2em;
+      padding: 0 1em;
+
     }
   
     .content h2 {
+      position: relative;
       font-size: 2rem;
-      bottom: 0;
+      bottom: 0.5rem;
+      left:1rem;
     }
   
     .content p {
       font-size: 1.5rem;
       width: 100%;
       padding: 0.8em;
+      position: relative;
+      bottom:0.5rem;
     }
   
     .new-btn {
@@ -531,7 +536,7 @@ Card Section
       font-size: 1.1rem;
     }
   }
-   @media only screen and (max-width: 768px) { /*Mobile Media query */
+    @media only screen and (max-width: 768px) { /*Mobile Media query */
         .info2-container {
           position: relative;
           flex-direction: column;
@@ -559,10 +564,14 @@ Card Section
         }
         
         .content h2 {
-          display: inline;
-          font-size: 2rem;
+          overflow-wrap: normal;
+          width: inherit;
+          display: inline-block;
+          font-size:1.5em;
           margin-bottom: 1rem;
           text-align: center;
+          word-break: break-word;
+          white-space: break-spaces;
         }
         
         .content p {
@@ -575,6 +584,7 @@ Card Section
 
             position: relative;
             display: block;
+            
            
         }
       }
@@ -582,123 +592,90 @@ Card Section
       
      
 
-  /* Email Section*/ 
-  .section-separator{
-    width:100%;
-    
+  /* Email Section 
+  .section-separator {
+    margin-top: 45rem;
+    position: relative;
   }
-    .left-text h2{
-        position: absolute;
-        font-size:2.5rem;
-        line-height: 1.35;
-        width:90vw;
-        left:12%;
-        margin-top: 5vw;
-
+  
+  .email-part {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    right:60vw;
+  }
+  
+  .left-text {
+    flex-basis: 100%;
+    color: black;
+  }
+  
+  .left-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+  
+  .email-sect {
+   
+    margin-top: 2rem;
+    color: black;
+  }
+  
+  .email-sect p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .email-input-container {
+    display: flex;
+  }
+  
+  #email-box {
+    flex-basis: 70%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    background-color: rgb(38, 52, 80);
+  }
+  
+  #email-btn {
+    flex-basis: 30%;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    background-color: rgb(38, 52, 80);
+    color: white;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 768px) {
+    .email-part {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-
-
-    .email-sect{
-        position: absolute;
-        left: 95%;
-        top:70%;
+    
+    .left-text, .email-sect {
+      flex-basis: 100%;
+      text-align: center;
     }
-
-    .email-sect p{
-        position: relative;
-        line-height: 1.4;
-        font-size: 1.6rem;
-        padding-bottom:2rem;
-        right:20rem;
-        max-width: 100%;
+    
+    .left-text h2 {
+      font-size: 2rem;
     }
-
+    
     .email-input-container {
-        position: relative;
-        display: flex;
-        right:20rem;
+      flex-direction: column;
+      align-items: center;
     }
-
-
-    #email-box{
-        display: inline-block;
-        width: 350px;
-        height: 60px;
-        outline: #C1C1C2;
-        outline-offset: -2px;
-        padding: 1.3rem;
-        margin:0.5rem;
-        font-size:1.3rem;
+    
+    #email-box {
+      margin-bottom: 1rem;
     }
-
-    #email-btn{
-        position: relative;
-        display: inline-block;
-        width: 150px;
-        height: 60px;
-        color: white;
-        background-color: rgb(38, 52, 80);
-        font-size: 1.2rem;
-        white-space: nowrap;
-        top: 0.4rem;
-        cursor: pointer;
-
-    }
-    #email-btn:hover{
-        transition: color 0.2s;
-        text-decoration: none;
-        transition:ease .40s;
-        filter: brightness(50%);
-    }
-
-    @media (max-width: 767px) { /*phone media query*/
-        .left-text h2 {
-          position: static;
-          font-size: 2rem;
-          line-height: 1.3;
-          width: 100%;
-          left: 0;
-          text-align: center;
-        }
-      
-        .email-sect {
-          position: static;
-          margin-top: 2rem;
-          text-align: center;
-        }
-      
-        .email-sect p {
-          position: static;
-          line-height: 1.4;
-          font-size: 1.2rem;
-          padding-bottom: 1rem;
-          white-space: normal;
-        }
-      
-        .email-input-container {
-          position: static;
-          display: block;
-          margin: 0 auto;
-        }
-      
-        #email-box {
-          display: block;
-          width: 98%;
-          height: 3rem;
-          margin-bottom: 1rem;
-          font-size: 1rem;
-        }
-      
-        #email-btn {
-          position: static;
-          display: block;
-          width: 100%;
-          height: 3rem;
-          font-size: 1rem;
-          margin: 0 auto;
-          margin-top: 1rem;
-        }
-      }
+  }
 
 
 /* Footer section */
