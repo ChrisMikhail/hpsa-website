@@ -531,7 +531,7 @@ Card Section
       font-size: 1.1rem;
     }
   }
-    @media only screen and (max-width: 768px) { /*Mobile Media query */
+   @media only screen and (max-width: 768px) { /*Mobile Media query */
         .info2-container {
           position: relative;
           flex-direction: column;
@@ -539,7 +539,7 @@ Card Section
           align-items: center;
           margin: 20px auto;
           padding: 2rem;
-          top:520vh;
+          top:120%;
           
         }
         
