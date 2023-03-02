@@ -353,7 +353,7 @@ Card Section
     
 }
 .card-image{
-    border-radius: 18px;
+    border-radius: 24px;
     height: 26rem;
     display: grid;
     justify-content: center;
@@ -373,9 +373,9 @@ Card Section
     font-family: 'Times New Roman', Serif;
     color:black;
     text-align: center;
-    font-size:1.2rem;
-    line-height: 1.6;
-    letter-spacing: 0.1rem;
+    font-size:1.25rem;
+    line-height: 1.3;
+   
     display: flex; 
     flex-direction: column; 
 
@@ -392,7 +392,7 @@ Card Section
     text-align: center;
     color:#EAEAEA;
     border:none;
-    border-radius: 0rem;
+    border-radius: 1.2rem;
     transition: 0.2s;
     cursor:pointer;
     letter-spacing: 0.1rem;
@@ -444,7 +444,7 @@ Card Section
     top:110vh;
     margin-left: 9rem;
     max-width: 100vw;
-    min-height: 300px;
+    min-height: 100px;
     
 
    
@@ -487,7 +487,7 @@ Card Section
     display: flex;
     font-size:1.6rem;
     line-height: 1.6;
-    width:100%;
+    display: block;
     padding: 0.7rem;
   }
 
@@ -495,10 +495,11 @@ Card Section
   .new-btn {
     position: relative;
     top:3rem;
-    padding: 1.6em 2em 1.2em 2.5em;
+    padding: 1.2em 1.1em 1em 1.5em;
     border-radius: 3px;
     font-size:1.3rem;
     background-color: rgb(38, 52, 80);
+    margin: 0 0.1em;
     
   }
 
@@ -514,7 +515,7 @@ Card Section
       padding: 0 1em;
 
     }
-  
+    
     .content h2 {
       position: relative;
       font-size: 2rem;
@@ -525,15 +526,22 @@ Card Section
     .content p {
       font-size: 1.5rem;
       width: 100%;
+  
       padding: 0.8em;
       position: relative;
       bottom:0.5rem;
+      max-height: 100%;
+    }
+    .info-image img {
+      position: sticky;
+      
     }
   
     .new-btn {
       top: 2rem;
       padding: 1.2em 1.8em 1em 2em;
       font-size: 1.1rem;
+      margin: 0 1em;
     }
   }
     @media only screen and (max-width: 768px) { /*Mobile Media query */
@@ -581,9 +589,14 @@ Card Section
         }
         
         .new-btn {
-
+            width: 100%;
             position: relative;
             display: block;
+            padding: 1.2em 0;
+              border-radius: 3px;
+              font-size: 1.3rem;
+              background-color: rgb(38, 52, 80);
+            margin: 0.5em 0;
             
            
         }
@@ -591,90 +604,177 @@ Card Section
 
       
      
-
-  /* Email Section 
-  .section-separator {
-    margin-top: 45rem;
-    position: relative;
-  }
+/*Email Section*/
+.section-separator {
+  position: relative;
+  top:120vh;
+}     
   
-  .email-part {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    right:60vw;
-  }
+.email-part {
+  position: relative;
+  display: flex;
+  top: 50%;
+  left:7%;
+  align-items: center;
+  justify-items: center;
+    
+   
+}
   
-  .left-text {
-    flex-basis: 100%;
+.left-text {
+    flex-basis: 80%;
     color: black;
+  
+}
+  
+.left-text h2 {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    max-width:55%;
+   
+    
+}
+  
+.email-sect {
+  position: relative;
+    margin-top: 2rem;
+    color: black;
+    right:12vw;
+
+}
+  
+.email-sect p {
+    line-height: 1.6;
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+}
+  
+.email-input-container {
+    display: flex;
+    position: relative;
+    bottom: 5vh;
+}
+  
+#email-box {
+  display: inline-block;
+  width: 350px;
+  height: 60px;
+  outline: #C1C1C2;
+  padding: 1.3rem;
+  font-size:1.3rem;
+ 
+
+}
+  
+#email-btn {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 60px;
+  color: white;
+  background-color: rgb(38, 52, 80);
+  font-size: 1.2rem;
+  white-space: nowrap;
+  cursor: pointer;
+  left:1rem;
+}
+@media screen and (min-width: 772px) and (max-width:1262px) { /*laptops */
+  .left-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
   }
   
   .left-text h2 {
-    font-size: 2.5rem;
-    line-height: 1.5;
+    position: relative;
+    font-size: 1.9em;
+    max-width: 81%;
+    right:5vw;
+    
   }
+  .email-sect p{
+    position: relative;
+    font-size:1.4em;
+    line-height: 1.4;
+    left:5vw;
+  }
+  .email-input-container{
+    position: relative;
+    lefT:5vw; 
+  }
+}
+
   
-  .email-sect {
-   
-    margin-top: 2rem;
-    color: black;
-  }
-  
-  .email-sect p {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .email-input-container {
-    display: flex;
-  }
-  
-  #email-box {
-    flex-basis: 70%;
-    padding: 1rem;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 3px 0 0 3px;
-    background-color: rgb(38, 52, 80);
-  }
-  
-  #email-btn {
-    flex-basis: 30%;
-    padding: 1rem 1.5rem;
-    font-size: 1.5rem;
-    background-color: rgb(38, 52, 80);
-    color: white;
-    border: none;
-    border-radius: 0 3px 3px 0;
-    cursor: pointer;
-  }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) { /* Mobile */
     .email-part {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+          position: relative;
+          flex-direction: column;
+          align-items: center;   
+          max-width: 100vw;
+          
+         
     }
     
     .left-text, .email-sect {
-      flex-basis: 100%;
       text-align: center;
+      position: relative;
+      width:150%;
+      margin: auto;
+      
+    }
+    .email-sect p{
+      max-width: 50%;
+      display: flex;
+      position: relative;
+      font-size: 1.5em;
+      right:-18vw;
+      margin-top: 20px;
+      
+      
+     
+      
     }
     
     .left-text h2 {
-      font-size: 2rem;
+      display: flex;
+      font-size: 2em;
     }
     
     .email-input-container {
+      display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      padding: 0 30% 0 4%; 
+      box-sizing: border-box;
+
+
+     
+    
+
     }
     
     #email-box {
-      margin-bottom: 1rem;
-    }
+          position: relative;
+          height: 3.3rem;
+          margin-bottom: 1rem;
+          font-size: 1rem;
+          width: 95vw !important;
+          padding: 0 0 0 10%;
+
+        }
+       
+      
+        #email-btn {
+          position: static;
+          display: block;
+          width: 100%;
+          height: 3rem;
+          font-size: 1rem;
+          margin: 0 auto;
+         
+        }
   }
 
 
