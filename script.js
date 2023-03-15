@@ -3,6 +3,7 @@ let total = 0;
 function respondNav() {
 
   WindowWidth = $(window).width();
+ 
 
   if (WindowWidth <= 800) {
     $("nav ul").css("display", "none");
@@ -48,6 +49,8 @@ $(document).ready(function () {
   respondNav();
 })
 
+
+
 $(window).resize(function () {
   respondNav();
   $(".container").css("filter", "brightness(100%)");
@@ -69,4 +72,25 @@ $(".toggle-button").click(function () {
     $(".container").css("filter", "brightness(100%)");
     $("body").css("overflow-y", "visible");
   }
+});
+
+const profileImgs = document.querySelectorAll(".card-img-top");
+const toggleBtns = document.querySelectorAll(".toggle");
+const texts = document.querySelectorAll(".card-text");
+
+toggleBtns.forEach((toggleBtn, index) => {
+  toggleBtn.addEventListener("click", () => {
+   
+    profileImgs[index].classList.toggle("img-expand");
+
+   
+    texts[index].classList.toggle("text-expand");
+
+    toggleBtn.firstElementChild.classList.toggle("arrow-rotate");
+    if (!texts[index].classList.contains("text-expand")) {
+      texts[index].style.height = "0";
+    } else {
+      texts[index].style.height = texts[index].scrollHeight + "px";
+    }
+  });
 });
