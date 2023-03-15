@@ -3,7 +3,7 @@ from flask_mail import Mail, Message
 import config
 import os
 
-app = Flask(__name__, template_folder='.')
+app = Flask(__name__, template_folder=".")
 
 
 app.config['MAIL_SERVER'] = config.MAIL_SERVER
@@ -16,6 +16,12 @@ app.config['MAIL_USE_SSL'] = config.MAIL_USE_SSL
 @app.route('/')
 def index():
     return render_template("index.html")
+
+@app.route('/team')
+def team():
+    return render_template("team.html")
+
+
 
 mail = Mail(app)
 
