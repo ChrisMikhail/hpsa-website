@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="static/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <title>HPSA</title>
@@ -15,7 +15,7 @@
 
 <body>
     <nav>
-        <img src="images/HPSA Logo" id="logo">
+        <img src="static/HPSA Logo" id="logo">
         <div class="hamburgMenu">
             <a href="#" id="toggle" class="toggle-button">&#8801;</a>
         </div>
@@ -50,14 +50,14 @@
                 towards builing a bridge between students and the field of health
                 policy.</p>
             <a href="team.html" class="team">Meet the Team!</a>
-            <img class="hexagon" src="images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg"></img>
+            <img class="hexagon" src="static/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg"></img>
         </div>
 
         <!-- Grid Section -->
         <div class="card-container">
             <div class="cards">
                 <div class="card-image">
-                    <img src="images/news-woodn-dice-depicting-letters-bundle-small-newspapers-leaning-left-dice-34802664-transformed.jpeg">
+                    <img src="static/news-woodn-dice-depicting-letters-bundle-small-newspapers-leaning-left-dice-34802664-transformed.jpeg">
                 </div>
                 <div class="card-text">
                     <h2>Read our journalists' articles and opinion pieces.</h2>
@@ -68,7 +68,7 @@
             </div>
             <div class="cards">
                 <div class="card-image">
-                    <img src="images/5319448-table-chair-meeting-room-meeting-space-workspace-office-conference-meeting-empty-workplace-glass-reflection-minimal-business-conference-room-work-clean-board-room-nashville-free-images-transformed.jpeg">
+                    <img src="static/TABLE.jpeg">
                 </div>
                 <div class="card-text">
                     <h2>Take a look at our upcoming <br> events!</h2>
@@ -79,7 +79,7 @@
             </div>
             <div class="cards">
                 <div class="card-image">
-                    <img src="images/health.jpeg">
+                    <img src="static/health.jpeg">
                 </div>
                 <div class="card-text">
                     <h2>Keep up with featured news relevant to global health</h2>
@@ -90,7 +90,7 @@
             </div>
             <div class="cards">
                 <div class="card-image">
-                    <img src="images/time.jpeg">
+                    <img src="static/time.jpeg">
                 </div>
                 <div class="card-text">
                     <h2>Learn more about our future plans and announcements</h2>
@@ -103,7 +103,7 @@
         <!--Next Info Section-->
         <div class="info2-container">
             <div class="info-image">
-                <img src="images/photo-1613192643307-ae6aa72a2499.jpg">
+                <img src="static/photo-1613192643307-ae6aa72a2499.jpg">
             </div>
             <div class="side-info">
                 <div class="content">
@@ -126,10 +126,10 @@
                     </div>
                     <div class="email-sect">
                         <p>Sign up to be the first to know about our upcoming events and article releases.</p>
-                        <form method="post" action="subscriberform.php">
+                        <form method="post" action="/submit-email">
                             <div class="email-input-container">
                                 <input type="email" placeholder="Email Address" id="email-box" name="email">
-                                <input type="submit" value="Sign Up" id="email-btn">
+                                <input type="submit" value="Sign Up" id="email-btn" >
                             </div>
                         </form>
                     </div>

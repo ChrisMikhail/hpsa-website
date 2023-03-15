@@ -12,7 +12,7 @@
 body {
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url(images/medical.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url(medical.png);
     background-size:cover;
     background-position: center;
     color: aliceblue;
