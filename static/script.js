@@ -1,4 +1,4 @@
-let total = 0;
+let menutoggle = false;
 
 function respondNav() {
 
@@ -12,7 +12,6 @@ function respondNav() {
     $("nav ul li").css("margin", "0");
     $("nav ul li").css("padding", "1.5rem");
     $("nav ul li").css("text-align", "right");
-    // $("nav ul li").css("font-size", "calc(1rem + 0.5vw)");
     $("nav ul li").css("transform", "translate(0, 7rem)");
     $("nav ul").css("line-height", "2");
     $(".one").css("font-size", "calc(0.5rem + 1vw)");
@@ -55,11 +54,11 @@ $(window).resize(function () {
   respondNav();
   $(".container").css("filter", "brightness(100%)");
   $("body").css("overflow-y", "visible");
-  total = 0;
+  menutoggle = false;
 })
 
 $(".toggle-button").click(function () {
-  total++;
+  menutoggle = true;
   $("nav ul li").css("display", "list-item");
   $("nav ul").css("background-color", "rgb(38, 52, 80)");
   $("nav ul").css("height", "32rem");
@@ -68,7 +67,7 @@ $(".toggle-button").click(function () {
   $(".container").css("filter", "brightness(40%)");
   $("body").css("overflow-y", "hidden");
   $(".one").css("text-align", "center");
-  if (total % 2 == 0){
+  if (menutoggle) {
     $(".container").css("filter", "brightness(100%)");
     $("body").css("overflow-y", "visible");
   }
