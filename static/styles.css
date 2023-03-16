@@ -423,7 +423,7 @@ Card Section
 
 
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1300px) {
   .card-container {
     display: grid;
     grid-template-columns: 50% 50%;
