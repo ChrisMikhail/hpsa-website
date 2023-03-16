@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 
-*{
+* {
 
     margin: 0;
     padding: 0;
@@ -17,17 +17,16 @@ body {
     background-repeat: no-repeat;
     overflow-x: hidden;
     justify-content: center;
-    
 
-  
+
+
 }
-html{
-    
-}
+
+html {}
 
 nav {
-    position:absolute;
-    width:100%;
+    position: absolute;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,7 +34,7 @@ nav {
 }
 
 .one {
-    color:black;
+    color: black;
     border: 1px solid aliceblue;
     font-size: 1.1rem;
     padding: 24px;
@@ -44,7 +43,7 @@ nav {
     transition: color 0.2s;
     text-decoration: none;
     border-radius: 4px;
-    transition:ease .40s;
+    transition: ease .40s;
 }
 
 #logo {
@@ -77,7 +76,7 @@ nav ul li a {
     transition: color 0.2s;
     text-decoration: none;
     border-radius: 4px;
-    transition:ease .40s;
+    transition: ease .40s;
 }
 
 .icon:hover {
@@ -88,28 +87,29 @@ nav ul li a {
     filter: brightness(100%);
 }
 
-@keyframes transitionIn{
-  from{
-    opacity: 0;
-    transform: rotateX(-20deg);
-  }
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-20deg);
+    }
 
-  to {
-    opacity: 4;
-    transform: rotateX(0);
+    to {
+        opacity: 4;
+        transform: rotateX(0);
 
-  }
+    }
 }
 
-.container{  
+.container {
 
-    width:100%;
+    width: 100%;
     animation: transitionIn 0.5s;
-    margin-top:200px;
-   
-  
+    margin-top: 200px;
+
+
 
 }
+
 .hamburgMenu {
     font-size: 4rem;
     z-index: 2;
@@ -135,47 +135,49 @@ nav ul li a {
 Team Section */
 
 
-.card img{
+.card img {
     border-radius: 50%;
     width: 250px;
     object-fit: cover;
-    margin:auto;
+    margin: auto;
 }
-.card{
-    box-shadow: rgba(0,0,0,0.25) 0px 25px 50px -12px;
-    padding:20px;
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    padding: 20px;
     border: none;
-   
+
 }
-.card-body{
+
+.card-body {
     text-align: center;
-    
 }
-.col{
-   
-    
-}
+
 .card-text {
     position: relative;
     width: 100%;
     height: 0;
-    overflow: hidden;
     z-index: 1;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s ease;
+}
+
+/* .card-text.text-expand {
     transition: height 0.3s ease-in-out;
-  }
-  
-  .card-text.text-expand {
-    height: auto;
-    transition: height 0.3s ease-in-out;
-  }
-  
-  .toggle {
+} */
+
+#toggle {
     cursor: pointer;
-    
-  }
-  
-  .arrow-rotate {
-    
+    text-decoration: none;
+    color: aliceblue;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.arrow-rotate {
+
     transform: rotate(180deg);
     transition: 0.5s ease-in-out;
-  }
+}

@@ -79,12 +79,8 @@ const texts = document.querySelectorAll(".card-text");
 
 toggleBtns.forEach((toggleBtn, index) => {
   toggleBtn.addEventListener("click", () => {
-   
     profileImgs[index].classList.toggle("img-expand");
-
-   
     texts[index].classList.toggle("text-expand");
-
     toggleBtn.firstElementChild.classList.toggle("arrow-rotate");
     if (!texts[index].classList.contains("text-expand")) {
       texts[index].style.height = "0";
@@ -93,3 +89,4 @@ toggleBtns.forEach((toggleBtn, index) => {
     }
   });
 });
+
