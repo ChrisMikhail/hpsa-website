@@ -28,7 +28,7 @@ mail = Mail(app)
 @app.route('/submit-email', methods=['POST'])
 def submit_email():
     email = request.form['email']
-    msg = Message('New Form Submission', sender='samuelmikhc@gmail.com', recipients=['Akshay2334@hotmail.com'])
+    msg = Message('New Form Submission', sender='samuelmikhc@gmail.com', recipients=['Hpsaglobal@gmail.com'])
     msg.body = f"New Email: {email}"
     mail.send(msg)
     return ('', 204)
